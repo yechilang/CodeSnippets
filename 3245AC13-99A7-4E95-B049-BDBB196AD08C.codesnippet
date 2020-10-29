@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MakeTapGesture</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@property (nonatomic, strong) UITapGestureRecognizer *&lt;#property#&gt;; // &lt;#info#&gt;
+UITapGestureRecognizer *tapGesture = ({
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(&lt;#selector#&gt;:)];
+    [self.view addGestureRecognizer:gesture];
+    gesture;
+});
+&lt;#property#&gt; = tapGesture;
+- (void)&lt;#selector#&gt;:(UITapGestureRecognizer *)gesture {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3245AC13-99A7-4E95-B049-BDBB196AD08C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITapGestureRecognizer快速构造</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
