@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MakeButton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@property (nonatomic, strong) UIButton *&lt;#property#&gt;; // &lt;#info#&gt;
+UIButton *button = ({
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor blueColor];
+    button.layer.cornerRadius = 5;
+    button.clipsToBounds = true;
+    [button setTitle:@"" forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor blackColor];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    [button setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    button;
+});
+&lt;#property#&gt; = button;
+[self.view addSubview:button];
+[button mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.&lt;#constraints#&gt;
+}];
+
+- (void)clickButton:(UIButton *)button {
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>673EC7FF-97FC-4EFD-8EBA-BDC977F921E9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIButton快速构造</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

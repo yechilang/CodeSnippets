@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MakeTableView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import "&lt;#cell class#&gt;.h"
+&lt;UITableViewDelegate, UITableViewDataSource&gt;
+@property (nonatomic, strong) UITableView *&lt;#property#&gt;; // &lt;#info#&gt;
+UITableView *tableView = ({
+    UITableView *tableView = [[UITableView alloc] init];
+    tableView.backgroundColor = [UIColor whiteColor];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [tableView registerNib:[UINib nibWithNibName:[&lt;#cell class#&gt; description] bundle:nil] forCellReuseIdentifier:@"cell"];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView;
+});
+&lt;#property#&gt; = tableView;
+[self.view addSubview:tableView];
+[tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.&lt;#constraints#&gt;
+}];
+
+#pragma mark - UITableView Delegate / DataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return &lt;#expression#&gt;;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    return cell;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6A7FF333-7568-404E-BC52-C59B3046D395</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITableView快速构造</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

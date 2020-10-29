@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MakeCollectionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#import "&lt;#cell class#&gt;.h"
+&lt;UICollectionViewDelegate, UICollectionViewDataSource&gt;
+@property (nonatomic, strong) UICollectionViewFlowLayout *&lt;#property#&gt;; // &lt;#info#&gt;
+@property (nonatomic, strong) UICollectionView *&lt;#property#&gt;; // &lt;#info#&gt;
+UICollectionViewFlowLayout *layout = ({
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.itemSize = CGSizeMake(&lt;#CGFloat width#&gt;, &lt;#CGFloat height#&gt;);
+    layout.minimumLineSpacing = 0;
+    layout.minimumInteritemSpacing = 0;
+    layout;
+});
+&lt;#property#&gt; = layout;
+UICollectionView *collectionView = ({
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    collectionView.backgroundColor = [UIColor whiteColor];
+    [collectionView registerNib:[UINib nibWithNibName:[&lt;#cell class#&gt; description] bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    collectionView;
+});
+&lt;#property#&gt; = collectionView;
+[self.view addSubview:collectionView];
+[collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.&lt;#constraints#&gt;
+}];
+#pragma mark - UICollectionView Delegate / DataSource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return &lt;#expression#&gt;;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    return cell;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BF0C0686-DC49-4E4C-8690-77DEF38767B8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UICollectionView快速构造</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
