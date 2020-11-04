@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>MakeWindow</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@property (nonatomic, strong) UIWindow *window; // 窗口
+#import "&lt;#ViewController Class#&gt;.h"
+_window = ({
+    UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    [window makeKeyAndVisible];
+    window.rootViewController = [&lt;#ViewController Class#&gt; new];
+    window;
+});</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A7F927AF-B80F-4EE3-98C0-997A68921705</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIWindow快速构造</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
